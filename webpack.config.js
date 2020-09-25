@@ -7,11 +7,11 @@ module.exports = {
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 8080,
+    port: 8081,
     hotOnly: true
   },
   output: {
-    publicPath: 'http://localhost:8080/'
+    publicPath: 'http://localhost:8081/'
   },
   module: {
     rules: [
@@ -31,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'host',
+      name: 'consumer',
       filename: 'remoteEntry.js',
       remotes: {},
       exposes: {},
