@@ -33,7 +33,9 @@ module.exports = (_, argsv) => ({
     new ModuleFederationPlugin({
       name: 'consumer',
       filename: 'remoteEntry.js',
-      remotes: {},
+      remotes: {
+        'host': 'host@https://mf-host-app.vercel.app/remoteEntry.js'
+      },
       exposes: {},
       shared: require('./package.json').dependencies
     }),
