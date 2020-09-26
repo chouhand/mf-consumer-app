@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { ModuleFederationPlugin } = require('webpack').container
 const path = require('path')
 
-module.exports = {
+module.exports = (_, argsv) => ({
   // entry: './src/index',
   // mode: 'development',
   devServer: {
@@ -41,4 +41,4 @@ module.exports = {
       template: './public/index.html'
     })
   ]
-}
+})
